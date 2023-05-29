@@ -1,0 +1,228 @@
+     *{
+        margin:0%;
+  padding:0%;
+  }
+  
+  body{
+    background-image: url(../images/kosgoda6.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 50%;
+  }
+
+  div {margin:0 auto; /* centred on page, no margin at top and bottom */
+	max-width:1300px;
+	max-height:max-content;}    
+     
+     /*header*/
+    
+                                                        /*nav*/
+     
+     
+     
+     
+     
+     
+     
+                                                        /* NAVBAR STYLING STARTS */
+     .navbar {
+     display: flex;
+     align-items:center;
+     justify-content: space-evenly;
+     padding: 20px;
+     
+     color: #fff;
+     width:1000px;
+     position: fixed;
+     animation: navbar 2s backwards;
+ } 
+ @keyframes navbar {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+
+     .nav-links{max-width: 650px;}
+     .nav-links a {
+     color: black;
+     
+     
+     
+     }
+     
+     /* LOGO */
+     .logo {
+     width:140px;
+     height:140px;
+     margin: 2px;
+     
+     }
+     
+     /* NAVBAR MENU */
+     .menu {
+     display: flex;
+     gap: 10px;
+     font-size: 12px;
+     
+ 
+     
+     }
+     
+     .menu li:hover {
+    
+     border-radius: 45px;
+     transition: 0.3s ease;
+     }
+     
+     .menu li {
+     padding: 5px 14px;
+     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+     list-style: none;
+     border-radius:5px;
+     border-style:solid;
+     border-color:black;
+     font-family: Showcard Gothic;
+     background-color:rgb(255, 255, 255,0.3);
+
+ }
+ .menu li a{
+     text-decoration: none;
+     }
+     /* DROPDOWN MENU */
+     .other {
+     position: relative;
+     
+     
+     
+     
+  
+     
+     }
+     
+     .dropdown {
+    
+     padding: 20px;
+     position:absolute;
+     display: none;
+     border-radius: 8px;
+     top: 14px;
+     
+      
+     }
+     
+     .dropdown li + li {
+     margin-top: 10px;
+     }
+     
+     .dropdown li {
+     padding: 0.5em 1em;
+     width: 8em;
+     text-align: center;
+     
+     }
+     
+    
+     
+     .other:hover .dropdown {
+     display: block;}
+
+      /* footer */
+		.footer {
+            background-color: rgba(117, 108, 108, 0.5);
+            padding-top: 10px;
+            text-align: center;
+            font-size: 17px;
+                  font-family:harrington;
+                height:200px;
+                backdrop-filter: blur*(5px);
+                margin:0% auto;
+                max-width:1300px ;
+                background-color: rgb(98, 151, 98);
+                
+              
+                
+                    }
+          
+          .footer ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 10px 0;
+            text-align:center;
+                  font-family:Arial Narrow;
+                 }
+          
+          .footer li {
+            margin-bottom: 5px;
+            font-style: italic;
+            color: #000000;
+          }
+                                           /****footer end************/
+
+                                           .container{
+                                            width:auto;
+                                           
+                                            max-width: 1300px;
+                                            background-position: bottom;
+                                            }    
+      
+                                            
+
+     
+       .hero-image{
+        background-image: url(../images/kosgoda7.jpg);
+        margin: 0 auto;
+       
+        height: 795px;
+		  
+		background-repeat: no-repeat;
+    background-position: top;
+    background-size: cover;
+        
+
+       }
+       section img{
+        width:920px;
+        height:640px;
+       }                                     
+       article{
+        max-width: 1000px;
+        
+        max-height: max-content;
+        margin: 0 auto;
+        padding: 30px;
+        text-align:center;
+        background-color: rgb(118, 143, 76,0.5);
+       }
+
+       
+    .introduction{
+      margin-bottom: 100px;
+      font-size: 30px;
+      color: rgb(118, 64, 2);
+      background-color: rgb(166, 157, 222,0.5);
+      padding:20px;
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+   
+    
+    
+
+section {
+  margin-top: 20px;
+  font-size: 17px;
+  
+}
+p{
+  margin-top: 10px;
+}
+article section p{
+  margin-top: 10px;
+  background-color:  rgb(152, 206, 60,0.3);
+  padding: 20px;
+}
