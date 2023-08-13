@@ -12,7 +12,7 @@
     min-width: 600px;
   }
   
-  ul {
+  .ull {
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -353,7 +353,13 @@ background-color: rgb(0, 123, 255,0.5);
    
     border-radius: 5px;
   }
+  .detail .iti__country-list {
 
+
+    max-width:200px;
+     max-height: 80px;
+     
+   }
  .payment{
   background-image: url(../../images/paymentt.png);
   background-repeat: no-repeat;
