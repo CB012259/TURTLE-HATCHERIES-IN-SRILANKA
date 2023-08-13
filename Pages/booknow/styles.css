@@ -153,18 +153,39 @@
 
   }
   
-  .ticket .priceTable {
-    width: 500px;
-    border-collapse: collapse;
-    margin-bottom: 20px;
+ .priceTable {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+.priceTable th, .priceTable td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: center;
+}
+
+
+.priceTable th {
+  
+  color: rgb(0, 0, 0);
+}
+
+
+@media (max-width: 768px) {
+  .priceTable {
+    font-size: 12px;
   }
   
- .ticket .priceTable th,
- .ticket .priceTable td {
-    padding: 8px;
-    border: 1px solid #ccc;
-    text-align: center;
+  .priceTable th, .priceTable td {
+    padding: 6px;
   }
+  
+  .priceTable th {
+    font-size: 14px;
+  }
+}
+
   
  .ticket #summarytable {
     margin-top: 20px;
