@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 
+   <link rel="stylesheet" href="styles.css">
+   <link  rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css"/>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+   <script src="script.js"> 
+  </script>
+ 
+  <title>Detail Page</title>
+</head>
+<nav>
+  <ul>
+   <li><a href="../Pages/hikkaduwa.html">HIKKADUWA PAGE</a></li>
+    <li><a href="tickets.html">Tickets</a></li>
+    <li><a href="detail.html">Details</a></li>
+    <li><a href="payment.html">Payment</a></li>
+    <li><a href="confirm.html">Confirm</a></li>
+  
+  </ul>
+</nav>
+<body id="detailspage" class="detail">
+ 
+  <form>
+    <h2>Details page</h2><br><br>
+    <label for="name">First Name:</label>
+
+    <input type="text" name="fullname" id="fullname" placeholder="Full Name">
+    <label  id="alertname" class="alert"></label>
+    <br><br>
+  
+    <label for="phonenumber" id="phonenumber" >Phone Number:</label>
+    <input id="phone" class="tel" type="tel" name="phone" placeholder="Mobile Number" />
+    <label id="alertnumber" class="alert"></label>
+   
+   <br><br>
+    
+  
+    <label for="email" id="alertemail">Email:</label>
+    <input type="email" name="email" id="femail" placeholder="Enter Email">
+    <label id="alertemail" class="alert"></label>
+    <br><br>
+  
+    <label for="confirmemail" id="alertemailc">Confirm Email:</label>
+    <input type="email" name="confirmemail" id="semail" placeholder="Confirm Email">
+    <label id="alertemail" class="alert"></label>
+    <br><br>
+
+    <label for="gender">Gender:</label> 
+    <select name="gender" id="gender">
+      <option value="select" disabled> Select</option> 
+      <option value="male">Male</option> 
+      <option value="female">Female</option> 
+    </select><br><br>
+  
+<input type="button" id="check" value="Update" onclick="saveData()"><br>
+<label for="alert" id="alertupdate" class="alert"></label>
+    <input type="button" name="next" value="Next">
+  </form>
+  <div id="summarytable">
+      
+    <table>
+      <tr>
+        <td>Name:</td>
+        <td id="fullnamet"></td>
+      </tr>
+       <tr>
+        <td >Selected date</td>
+        <td id="date"></td>
+      </tr>
+        <tr>
+        <td> Selected Time Duration:</td>
+        <td id="summary"></td>
+      </tr>
+      <tr>
+        <td> Selected Durations types:</td>
+        <td id="summarydur"></td>
+      </tr>
+      <tr>
+        <td>Mobile Number:</td>
+        <td id="phonet"></td>
+      </tr>
+     <tr>
+      <td>Email:</td>
+      <td id="femailt"></td>
+     </tr>
+      <tr>
+        <td>Gender:</td>
+        <td id="gendert"></td>
+      </tr>
+      <tr>
+        <th>Tickets</th>
+        <th>Charges</th>
+      </tr>
+      <tr>
+        <td id="option1"></td>
+        <td id="option1t"></td>
+      </tr>
+      <tr>
+        <td id="option2"></td>
+        <td id="option2t"></td>
+      </tr>
+      <tr>
+        <td id="option3"></td>
+        <td id="option3t"></td>
+      </tr>
+      <tr>
+        <td id="option4"></td>
+        <td id="option4t"></td>
+      </tr>
+      <tr>
+        <td id="option5"></td>
+        <td id="option5t"></td>
+      </tr>
+    
+
+      <tr>
+        <td > Total Payable:</td>
+        <td id="total"></td>
+      </tr>
+
+
+
+    </table>
+   
+    </div>
+<script>
+
+var date = localStorage.getItem('selectedDate');
+date = new Date(date);
+document.getElementById("date").innerHTML =  date;
+
+ let storedSummary = localStorage.getItem("summary");
+ document.getElementById("summary").innerHTML =  storedSummary;
+
+ let storedTotal = localStorage.getItem("total");
+document.getElementById("total").innerHTML=storedTotal +"$";
+
+let storedoption1t = localStorage.getItem("option1t");
+document.getElementById("option1t").innerHTML=storedoption1t +"$";
+
+let storedoption2t = localStorage.getItem("option2t");
+document.getElementById("option2t").innerHTML=storedoption2t +"$";
+
+let storedoption3t = localStorage.getItem("option3t");
+document.getElementById("option3t").innerHTML=storedoption3t +"$";
+
+let storedoption4t = localStorage.getItem("option4t");
+document.getElementById("option4t").innerHTML=storedoption4t +"$";
+
+let storedoption5t = localStorage.getItem("option5t");
+document.getElementById("option5t").innerHTML=storedoption5t +"$";
+
+let storedsummarydur = localStorage.getItem("summarydur");
+   document.getElementById("summarydur").innerHTML =  storedsummarydur;
+
+
+
+   let storedoption1 = localStorage.getItem("option1");
+document.getElementById("option1").innerHTML=storedoption1;
+
+let storedoption2 = localStorage.getItem("option2");
+document.getElementById("option2").innerHTML=storedoption2;
+
+let storedoption3= localStorage.getItem("option3");
+document.getElementById("option3").innerHTML=storedoption3;
+
+let storedoption4 = localStorage.getItem("option4");
+document.getElementById("option4").innerHTML=storedoption4;
+
+let storedoption5 = localStorage.getItem("option5");
+document.getElementById("option5").innerHTML=storedoption5;
+
+
+
+var genderSelect = document.getElementById("gender");
+var genderValue = genderSelect.value;
+
+
+  //localStorage.setItem("fullname",fullname);
+//localStorage.setItem("phone",phone);
+//localStorage.setItem("femail",femail);
+//localStorage.setItem("gender", genderValue);
+
+var saveDataClicked =false;
+function saveData() {
+    // Get the input values
+    const firstName = document.getElementById("fullname").value;
+    const phoneNumber = document.getElementById("phone").value;
+    const email = document.getElementById("femail").value;
+    const confirmEmail = document.getElementById("semail").value;
+    const gender = document.getElementById("gender").value;
+
+    // Create an object to store the data
+    const userData = {
+      fullname: firstName,
+      phone: phoneNumber,
+      email: email,
+      confirmemail: confirmEmail,
+      gender: gender,
+    };
+
+    // Convert the object to a JSON string and store it in localStorage
+    localStorage.setItem("userData", JSON.stringify(userData));
+
+
+    document.getElementById("fullnamet").innerHTML=firstName;
+    document.getElementById("phonet").innerHTML=phoneNumber;
+    document.getElementById("femailt").innerHTML=email;
+    document.getElementById("gendert").innerHTML=gender;
+
+   
+   
+    saveDataClicked = true;
+    // Enable the second button when the first button is clicked
+    document.getElementById("check").removeAttribute("disabled");
+
+
+  
+     document.getElementById("alertupdate").innerHTML="";
+
+  }
+
+
+
+
+ 
+
+
+ 
+
+
+
+const phoneInputField = document.querySelector("#phone");
+
+  const phoneInput = window.intlTelInput(phoneInputField, {
+    utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
+  });
+
+ // Get the input elements and the next button
+var fullname = document.getElementById("fullname");
+var phone = document.getElementById("phone");
+var femail = document.getElementById("femail");
+var semail = document.getElementById("semail");
+var next = document.querySelector("input[name='next']");
+
+// Get the alert labels
+var alertname = document.getElementById("alertname");
+var alertnumber = document.getElementById("alertnumber");
+var alertemail = document.getElementById("alertemail");
+var alertemailc = document.getElementById("alertemailc");
+
+// Define a function to validate the input fields
+function validateForm() {
+  // Initialize a variable to store the validation status
+  var valid = true;
+
+  // Check if the fullname is empty
+  if (fullname.value == "") {
+    // Display an alert message
+    alertname.textContent = "Please enter your name";
+    // Set the validation status to false
+    valid = false;
+  } else {
+    // Clear the alert message
+    alertname.textContent = "";
+  }
+
+  // Check if the phone number is empty or not a valid number
+  if (phone.value == "" || isNaN(phone.value)) {
+    // Display an alert message
+    alertnumber.textContent = "Please enter a valid phone number";
+    // Set the validation status to false
+    valid = false;
+  } else {
+    // Clear the alert message
+    alertnumber.textContent = "";
+  }
+
+  // Check if the email is empty or not a valid email
+  if (femail.value == "" || !femail.value.includes("@")) {
+    // Display an alert message
+    alertemail.textContent = "Please enter a valid email";
+    // Set the validation status to false
+    valid = false;
+  } else {
+    // Clear the alert message
+    alertemail.textContent = "";
+  }
+
+  // Check if the confirm email is empty or not equal to the email
+  if (semail.value == "" || semail.value != femail.value) {
+    // Display an alert message
+    alertemailc.textContent = "Please confirm your email";
+    // Set the validation status to false
+    valid = false;
+  } else {
+    // Clear the alert message
+    alertemailc.textContent = "";
+  }
+
+  // Return the validation status
+  return valid;
+}
+
+// Add an event listener to the next button
+next.addEventListener("click", function() {
+  // Call the validateForm function and store the result
+  var isValid = validateForm();
+
+  // Check if the form is valid
+  if (isValid) {
+    // Redirect to the payment.html page
+   if (saveDataClicked) {
+      // Add your code here for the functionality of the second button
+    window.location.href="payment.html"; 
+
+    } 
+    else {
+     document.getElementById("alertupdate").innerHTML="First, Click the Update Button and Check the Details that you input";
+    }
+  }
+});
+
+
+
+
+  </script>
+  
+</body>
+</html>

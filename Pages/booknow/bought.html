@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Document</title>
+</head>
+
+<body class="thanks">
+    <div class="container">  
+        <label id="purchased">Thanks For the Purcha$e !!</label>
+    <label id="statement">Wanna make another Purcha$e?? </label>
+    <button onclick="yes()">YES</button><button onclick="no()">NO</button>
+</div>
+  
+
+</body>
+<script>
+function yes(){
+
+    window.location.href="tickets.html";
+  
+
+   
+
+
+localStorage.setItem('selectedDate', "");
+localStorage.setItem("summary", "");
+localStorage.setItem("summarydur", "");
+
+localStorage.setItem("total","");
+localStorage.setItem("option1t","");
+localStorage.setItem("option2t","");
+localStorage.setItem("option3t","");
+localStorage.setItem("option4t","");
+localStorage.setItem("option5t","");
+
+
+localStorage.setItem("option1","");
+localStorage.setItem("option2","");
+localStorage.setItem("option3","");
+localStorage.setItem("option4","");
+localStorage.setItem("option5","");
+
+
+
+
+
+
+
+
+    // Convert the object to a JSON string and store it in localStorage
+    localStorage.setItem("userData","");
+
+
+
+
+
+
+
+}
+function no(){
+  
+window.location.href="../Pages/hikkaduwa.html"; 
+
+  
+
+   
+
+
+  localStorage.setItem('selectedDate', "");
+  localStorage.setItem("summary", "");
+  localStorage.setItem("summarydur", "");
+  
+  localStorage.setItem("total","");
+  localStorage.setItem("option1t","");
+  localStorage.setItem("option2t","");
+  localStorage.setItem("option3t","");
+  localStorage.setItem("option4t","");
+  localStorage.setItem("option5t","");
+  
+  
+  localStorage.setItem("option1","");
+  localStorage.setItem("option2","");
+  localStorage.setItem("option3","");
+  localStorage.setItem("option4","");
+  localStorage.setItem("option5","");
+  
+  
+  
+  
+  
+  
+  
+  
+      // Convert the object to a JSON string and store it in localStorage
+      localStorage.setItem("userData","");
+  
+
+
+}
+ </script>
+</html>

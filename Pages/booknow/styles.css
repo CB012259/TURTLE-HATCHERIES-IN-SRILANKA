@@ -1,0 +1,740 @@
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  nav {
+    background-color: #333;
+    max-height: 50px;
+    position: fixed;
+    z-index: 5;
+    min-width: 600px;
+  }
+  
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-evenly;
+  }
+  li {
+    padding: 10px 20px;
+    
+  }
+  
+  li a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  li a:hover {
+    background-color: #555;
+  }
+  
+ 
+  li a.active {
+    background-color: #777;
+  } 
+
+.ticket{
+  background-image: url(../../images/ticketbody.png);
+  background-size:40%;
+ background-position:center;
+
+		   background-repeat:no-repeat;
+}
+
+
+  
+.ticket  .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px; 
+    background-color: rgba(231, 255, 250, 0.5);
+  }
+  
+.ticket  h1 {
+    font-size: 40px;
+    margin-bottom: 10px;
+    font-family: 'Times New Roman', Times, serif;
+    
+  }
+  
+ .ticket form {
+    margin-bottom: 20px;
+    padding-top: 30px;
+  }
+  
+ 
+.checkbox {
+  vertical-align: middle;
+}
+
+.ticket .du {
+  display: inline-block;
+  width: 130px; 
+  margin-right: 10px; 
+  background-color: rgba(205, 205, 205, 0.781);
+  padding: 7px;
+  margin-bottom: 5px;
+ 
+}
+
+.sel{
+  display: inline-block;
+  width: 130px;
+  margin-right: 10px;
+ 
+  padding: 5px;
+  font-weight: 700;
+}
+  
+.ticket  input[type="button"],
+.ticket  input[type="reset"] {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color:none;
+    color: #000000;
+    border-color: #000400;
+    cursor: pointer;
+    border-radius: 30px;
+    font-family: Segoe UI Black;
+   margin: 5px;
+     background-color: rgb(255, 255, 255,0.5);
+    
+
+  }
+  
+ .ticket input[type="button"]:hover,
+ .ticket input[type="reset"]:hover {
+    background-color: rgba(255, 195, 152, 0.48);
+  }
+  
+ .ticket input[type="button"]:active,
+.ticket  input[type="reset"]:active {
+  border-color: #010000;
+  }
+  
+.ticket  input[type="checkbox"] {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 30px;
+  height: 30px;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  vertical-align: middle;
+  cursor: pointer;
+}
+  
+ .ticket input[type="checkbox"]:checked {
+    background-color: #ebed71;
+    border-color: #000400;
+  }
+  
+  
+  .ticketForm label,
+  .ticketForm input[type="button"] {
+    display: inline-block;
+    
+    
+  }
+  
+  .ticket .value{
+    font-size: 20px;
+    font-weight: 600;
+  }
+  /* Add margin to separate buttons from labels */
+  .ticketForm input[type="button"] {
+    margin-left: 5px;
+   
+
+  }
+  
+  .ticket .priceTable {
+    width: 500px;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+  }
+  
+ .ticket .priceTable th,
+ .ticket .priceTable td {
+    padding: 8px;
+    border: 1px solid #ccc;
+    text-align: center;
+  }
+  
+ .ticket #summarytable {
+    margin-top: 20px;
+  }
+  
+.ticket  #summarytable table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+.ticket  #summarytable td {
+    padding: 10px;
+    border: 1px solid #ccc;
+    max-width: 200px;
+  }
+  
+.ticket  #summarytable td:first-child {
+    font-weight: bold;
+  }
+  
+ .ticket #flex {
+    display: flex;
+  }
+  
+.ticket  #duration,
+ .ticket #ticketForm {
+    flex: 1;
+    margin-right: 20px;
+  }
+  
+  @media screen and (max-width: 600px) {
+  .ticket  #flex {
+      flex-wrap: wrap;
+    }
+    
+  .ticket  #duration,
+    #ticketForm {
+      flex: 1 100%;
+      margin-right: 0;
+      margin-bottom: 20px;
+    }
+  }
+
+  .alert {
+    color: red;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+  
+  
+  
+  
+.detail{
+  background-image: url(../../images/detailturtle.png);
+  background-size:45%;
+ background-position:center;
+
+		   background-repeat:no-repeat; 
+}
+.detail body {
+    font-family: Arial, sans-serif;
+    background-color: rgb(242, 242, 242,0.5);
+   
+
+  }
+  
+  #detailspage {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+   
+  }
+  
+.detail form {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 10px;
+    background-color: rgba(224, 255, 219, 0.5);
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+   
+    
+
+  }
+  
+ .detail form h2 {
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 40px;
+    
+
+  }
+  
+.detail  label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+.detail  input[type="tel"],
+.detail  input[type="text"],
+.detail  input[type="email"],
+.detail  select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: rgb(255, 255, 255,0.5);
+  }
+
+  .detail input[type="button"]
+  {
+background-color: rgb(0, 123, 255,0.5);
+	color: #ffffff;
+	border: none;
+	border-radius: 5px;
+	padding: 10px 20px;
+	cursor: pointer;
+	width: 100%;
+	font-size: 16px;
+	transition: background-color 0.3s;
+
+  }
+
+   .detail  input[type="button"]:hover {
+	background-color: rgb(0, 86, 179,0.5);
+  }
+
+.detail #summarytable {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 10px;
+    background-color: rgba(211, 244, 255, 0.5);
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+  }
+  
+ .detail table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+ .detail table td,
+ .detail table th {
+    padding: 8px;
+    border: 1px solid #ccc;
+    text-align: left;
+  }
+  
+  /* Media Queries */
+  @media screen and (min-width: 600px) {
+   #detailspage {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  
+  @media screen and (max-width: 600px) {
+   .detail form {
+      grid-template-columns: 1fr;
+    }
+  
+   .detail #summarytable {
+      grid-template-columns: 1fr;
+    }
+  }
+  @media screen and (max-width: 600px) {
+   
+    ul {
+      width: 349px;
+      margin-right: 10px;
+    }
+    li {
+      padding: 10px;
+    }
+  }
+
+.detail .iti.iti--allow-dropdown
+  {
+    width: 100%;
+    padding:px;
+    margin-bottom: 15px;
+   
+    border-radius: 5px;
+  }
+
+ .payment{
+  background-image: url(../../images/paymentt.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 60%;
+ }
+ 
+  .payment body {
+	font-family: Arial, sans-serif;
+	background-color: #f2f2f2;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+  
+  
+  }
+  .payment .paylist{
+    width: 200px;
+    height: 42px;
+  }
+
+
+
+  #paymentform {
+	background-color: rgba(201, 201, 201, 0.5);
+	border-radius: 10px;
+	
+	padding: 20px;
+	
+	height: max-content;
+	margin-top: 20%;
+	
+  }
+  
+ 
+  .payment  label {
+	display: block;
+	font-weight: bold;
+	margin-bottom: 5px;
+  }
+	#paymentpage{
+	 display: grid;
+	grid-template-columns: 1fr;
+	grid-gap: 20px;
+	max-width: 800px;
+	margin: 0 auto;
+	padding: 20px;
+  }
+  
+  /* Input styles */
+  .payment input[type="text"] {
+	width: 90%;
+	padding: 10px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	margin-bottom: 15px;
+  background-color: rgb(255, 255, 255,0.5);
+  
+	&.ccFormatMonitor {
+	width: 240px;
+  }
+  }
+  .payment  input[type="password"] {
+	width: 90%;
+	padding: 10px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	margin-bottom: 15px;
+  }
+  
+ 
+  .payment  button[type="pay"] {
+	background-color: hsl(211, 100%, 50%);
+	color: #ffffff;
+	border: none;
+	border-radius: 5px;
+	padding: 10px 20px;
+	cursor: pointer;
+	width: 100%;
+	font-size: 16px;
+	transition: background-color 0.3s;
+  }
+  
+  .payment  button[type="pay"]:hover {
+	background-color: #0056b3;
+  }
+  
+  
+  .payment  #total {
+	font-size: 18px;
+	font-weight: bold;
+  }
+  
+  
+  .payment  .error {
+	color: #ff0000;
+	font-size: 14px;
+	margin-top: 5px;
+  }
+  
+  .payment  #summarytable {
+	  margin-top: 20px;
+
+	}
+	
+  .payment  table {
+	  width: 100%;
+	  border-collapse: collapse;
+	  margin-bottom: 20px;
+	  margin-top: 30px;
+	}
+	
+  .payment   td, th {
+	  padding: 10px;
+	  border: 1px solid #ccc;
+	}
+	
+
+  .payment   th {
+	  background-color: rgb(242, 242, 242,0.5);
+	}
+	
+
+  .payment  tr:nth-child(odd) {
+	  background-color: rgba(175, 174, 174, 0.5);
+    font-weight: 500;
+	}
+  .payment  tr:nth-child(even) {
+	  background-color: rgba(255, 255, 255, 0.482);
+    font-weight: 500;
+	}
+
+	
+
+  .payment tr:last-child {
+	  font-weight: bold;
+	  background-color: rgb(211, 211, 211,0.5);
+	}
+	@media screen and (min-width: 600px) {
+   #paymentpage {
+	  grid-template-columns: 1fr 1fr;
+	}
+  }
+  
+  @media screen and (max-width: 600px) {
+  .payment form {
+	  grid-template-columns: 1fr;
+	}
+  
+  .payment  #summarytable {
+	  grid-template-columns: 1fr;
+	}
+  }
+  
+  .payment  .exp-wrapper {
+  position: relative;
+  
+  display: flex;
+  width: 200px;
+  justify-content: space-between;
+  
+  line-height: 36px;
+  font-size: 24px;
+  
+  
+  }
+  
+  .payment .exp-wrapper:after {
+  
+  position: absolute;
+  left: 50%;
+  margin-left: 4px;
+  color: #aaa;
+  }
+  
+  .alert {
+	color: red;
+	font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  
+  }
+
+
+  .confirm  body, h1, h2, p, ul, li {
+    margin: 0;
+    padding: 0;
+  }
+  .confirm{
+     background-image: url(../../images/confirmturtle.png);
+    background-size:20%;
+   background-position:center;
+  
+         background-repeat:no-repeat;
+  }
+  .confirm  body {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+   
+  }
+  
+ 
+.confirm   .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  
+  
+.confirm   table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    margin-top: 15px;
+  }
+  
+.confirm  td, th {
+    padding: 8px;
+    border: 1px solid rgb(204, 204, 204,0.3);
+  }
+  
+  
+.confirm  th {
+    background-color: rgb(242, 242, 242,0.3);
+  }
+  
+  
+.confirm  tr:nth-child(odd) {
+    background-color: rgb(249, 249, 249,0.5);
+  }
+  .confirm  tr:nth-child(even) {
+    background-color: rgba(136, 135, 135, 0.121);
+  }
+
+  
+ 
+.confirm  tr:last-child {
+    font-weight: bold;
+    background-color: rgba(211, 211, 211, 0.502);
+  }
+  
+  
+.confirm  h1 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+ 
+.confirm  .container {
+   
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  
+.confirm  #fullname,.confirm #date,.confirm #summary,.confirm #summarydur,
+.confirm #phone,.confirm #femail,.confirm #gender {
+    font-weight: bold;
+  }
+  
+  
+.confirm  a {
+    color: rgb(255, 255, 255);
+  }
+  
+  
+  @media screen and (max-width: 600px) {
+   
+  .confirm #summarytable{
+    margin-top: 50px;
+  }
+  .confirm  body {
+      font-size: 14px;
+    }
+  }
+
+
+  .bought{
+    background-color: #9be70e;
+    color: #010000;
+
+    border: black;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 16px;
+    transition: background-color 0.3s; 
+    margin-bottom: 10px;
+  }
+
+  .bought button:hover{
+    background-color: #18ad10;
+  }
+
+ 
+  .thanks body, h1, h2, h3, p, label, button {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+
+
+
+.thanks  .container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    
+}
+
+
+.thanks {
+    text-align: center;
+   
+  
+    background-size: 60%;
+    background-position: center;
+    
+    
+    background-repeat:no-repeat;
+   
+    
+}
+.thanks .container{
+  margin-top: 4%;
+  background-color: rgb(173, 128, 16,0.5);
+}
+.thanks  #purchased {
+    display: block;
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #3f0000; 
+      font-size: 80px;
+      font-family: Georgia;
+      text-shadow: #030a12;
+
+}
+#statement{
+    display: block;
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #003f33; 
+      font-size: 50px; 
+      font-family:Georgia ;
+}
+
+
+.thanks label {
+    display: block;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.thanks  button {
+    background-color:rgb(9, 22, 37, 0.4);
+    color: white;
+    border: none;
+    padding: 20px 30px;
+    cursor: pointer;
+    font-size: 36px;
+    margin: 0 10px;
+    margin-top: 40px;
+    font-family: Wide Latin;
+    min-width: 200px;
+
+}
+
+.thanks button:hover {
+    background-color: rgba(43, 45, 0, 0.6); 
+}
+
+
+@media (max-width: 480px) {
+  .thanks  .container {
+        padding: 10px;
+        margin-top: 0%;
+    }
+}

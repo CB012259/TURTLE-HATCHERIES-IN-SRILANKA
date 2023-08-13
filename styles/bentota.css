@@ -1,0 +1,265 @@
+*{
+    margin:0%;
+padding:0%;
+}
+
+.bentota{
+background-image: url(../images/kosgoda5.png);
+background-repeat: no-repeat;
+background-position:center;
+background-size: 90%;
+
+
+}
+
+div {margin:0 auto; /* centred on page, no margin at top and bottom */
+max-width:1300px;
+max-height:max-content;}    
+ 
+ /*header*/
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ /* NAVBAR STYLING STARTS */
+  .navbar {
+    display: flex;
+    align-items:center;
+    justify-content:space-evenly;
+    padding: 20px;
+    color: #fff;
+    width:1000px;
+    position: fixed;
+    animation: navbar 2s forwards;
+   
+   
+   
+    
+   
+} 
+@keyframes navbar {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+
+
+
+    .nav-links{max-width: 650px;}
+    .nav-links a {
+    color: rgb(253, 252, 252);
+    
+    
+    
+    }
+    
+    /* LOGO */
+    .logo {
+    width:140px;
+    height:140px;
+    margin: 2px;
+    
+    }
+    
+    /* NAVBAR MENU */
+    .menu {
+    display: flex;
+    gap: 10px;
+    font-size: 12px;
+    
+
+    
+    }
+    
+    .menu li:hover {
+    border-radius: 45px;
+    transition: 0.3s ease;
+    }
+    
+    .menu li {
+    padding: 5px 14px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.5);
+    list-style: none;
+    border-radius:5px;
+    border-style:solid;
+    border-color:rgb(254, 253, 253);
+    font-family: Showcard Gothic;
+    background-color: rgba(0,0,0,0.5)
+
+
+}
+.menu li a{
+    text-decoration: none;
+    }
+    /* DROPDOWN MENU */
+    .other {
+    position: relative;
+    
+    
+    
+    
+ 
+    
+    }
+    
+    .dropdown {
+    padding: 20px;
+    position:absolute;
+    display: none;
+    border-radius: 8px;
+    top: 14px;
+    
+     
+    }
+    
+    .dropdown li + li {
+    margin-top: 10px;
+    }
+    
+    .dropdown li {
+    padding: 0.5em 1em;
+    width: 8em;
+    text-align: center;
+    
+    }
+    
+    
+    
+    .other:hover .dropdown {
+    display: block;}
+
+     /* footer */
+       .footer {
+           background-color: rgba(117, 108, 108, 0.5);
+           padding-top: 10px;
+           text-align: center;
+           font-size: 17px;
+                 font-family:harrington;
+               height:200px;
+               backdrop-filter: blur*(5px);
+               margin:0% auto;
+               max-width: 1300px ;
+               
+               
+               
+                   }
+         
+         .footer ul {
+           list-style-type: none;
+           padding: 0;
+           margin: 10px 0;
+           text-align:center;
+                 font-family:Arial Narrow;
+                }
+         
+         .footer li {
+           margin-bottom: 5px;
+           font-style: italic;
+           color: #ffffff;
+         }
+                                          /****footer end************/
+
+                                          .container{
+                                            width:auto;
+                                          background-color: rgb(0, 0, 0,0.3);
+                                            max-width: 1300px;
+                                            background-position: center;
+                                          
+                                           
+                                            
+                                            }    
+      
+                                            
+       
+     
+       .hero-image{
+        background-image: url(../images/bentota1.jpg);
+        margin: 0 auto;
+       
+        height: 656px;
+		  
+		background-repeat: no-repeat;
+    background-position: top;
+    background-size: cover;
+     
+        
+
+       }  
+       section img{
+        width:940px;
+        height:640px;
+        margin-right: 10px;
+       }                                    
+       article{
+        max-width: 1000px;
+        max-height: max-content;
+        margin-left: auto;
+        margin-right: auto;
+         padding-top: 50px;
+        text-align:center;
+        padding-left: 20px;
+        padding-right: 20px;
+        background-color: rgb(0, 0, 0,0.5);
+        font-family: SimSun;
+
+       }
+
+       
+    .introduction p{
+      margin-bottom: 10px;
+      font-size: 30px;
+      color: rgb(255, 255, 255);
+      background-color: rgb(0, 0, 0,0.7);
+      padding: 10px;
+      font-family: Ink Free;
+    }
+   
+    
+   
+
+section{
+  margin-top: 20px;
+  font-size: 17px;
+  color: #fff;
+}
+article section p{
+  margin-top: 10px;
+    background-color: rgb(105, 105, 105,0.4);
+    padding: 20px;
+
+}
+b{
+  font-size: 25px;
+}

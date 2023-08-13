@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+    <title>Payment page</title>
+</head>
+
+<body id="paymentpage" class="payment">
+  <nav>
+    <ul>
+     <li><a href="../Pages/hikkaduwa.html">HIKKADUWA PAGE</a></li>
+      <li><a href="tickets.html">Tickets</a></li>
+      <li><a href="detail.html">Details</a></li>
+      <li><a href="payment.html">Payment</a></li>
+      <li><a href="confirm.html">Confirm</a></li>
+    
+    </ul>
+  </nav>
+    <form id="paymentform" action="confirm.html">
+      <label>
+        Name
+        <input mbsc-input type="text" placeholder="Required" />
+        <label id="alertnames" class="alert"></label>
+    </label>
+    <label>
+        Card
+        <input id="credit" mbsc-input type="text" placeholder="Credit card number" maxlength="16"/>
+        <label id="alertcnumber" class="alert"></label>
+    </label>
+    <img src="../images/payment.png" class="paylist">
+    <label>
+        Expiration
+        <div class="exp-wrapper">
+          <input autocomplete="off" class="exp" id="month" maxlength="2" pattern="[0-9]*" inputmode="numerical" placeholder="MM" type="text" data-pattern-validate /> / 
+          <input autocomplete="off" class="exp" id="year" maxlength="2" pattern="[0-9]*" inputmode="numerical" placeholder="YY" type="text" data-pattern-validate />
+          
+        </div>
+<label id="alertexp" class="alert"></label>
+
+    </label>
+    <label>
+        Security
+        <input mbsc-input type="text" placeholder="4-digit CVV" maxlength="4" />
+        <label id="alertpassword" class="alert"></label>
+    </label>
+        <button type="pay" onclick="pay()">Pay   <label for="total" id="total"></label></button>
+      </form> 
+      
+      <div id="summarytable">
+      
+        <table>
+          <tr>
+            <td>Name:</td>
+            <td id="fullname"></td>
+          </tr>
+           <tr>
+            <td >Selected date</td>
+            <td id="date"></td>
+          </tr>
+            <tr>
+            <td> Selected Time Duration:</td>
+            <td id="summary"></td>
+          </tr>
+          <tr>
+            <td> Selected Durations types:</td>
+            <td id="summarydur"></td>
+          </tr>
+          <tr>
+            <td>Mobile Number:</td>
+            <td id="phone"></td>
+          </tr>
+         <tr>
+          <td>Email:</td>
+          <td id="femail"></td>
+         </tr>
+          <tr>
+            <td>Gender:</td>
+            <td id="gender"></td>
+          </tr>
+          <tr>
+            <th>Tickets</th>
+            <th>Charges</th>
+          </tr>
+          <tr>
+            <td id="option1"></td>
+            <td id="option1t"></td>
+          </tr>
+          <tr>
+            <td id="option2"></td>
+            <td id="option2t"></td>
+          </tr>
+          <tr>
+            <td id="option3"></td>
+            <td id="option3t"></td>
+          </tr>
+          <tr>
+            <td id="option4"></td>
+            <td id="option4t"></td>
+          </tr>
+          <tr>
+            <td id="option5"></td>
+            <td id="option5t"></td>
+          </tr>
+        
+    
+          <tr>
+            <td > Total Payable:</td>
+            <td id="totalt"></td>
+          </tr>
+
+
+    
+        </table>
+       
+        </div>
+   <script>
+  
+var date = localStorage.getItem('selectedDate');
+date = new Date(date);
+document.getElementById("date").innerHTML =  date;
+
+ let storedSummary = localStorage.getItem("summary");
+ document.getElementById("summary").innerHTML =  storedSummary;
+
+ let storedTotal = localStorage.getItem("total");
+document.getElementById("totalt").innerHTML=storedTotal +"$";
+document.getElementById("total").innerHTML=storedTotal+"$" ;
+
+let storedoption1t = localStorage.getItem("option1t");
+document.getElementById("option1t").innerHTML=storedoption1t +"$";
+
+let storedoption2t = localStorage.getItem("option2t");
+document.getElementById("option2t").innerHTML=storedoption2t +"$";
+
+let storedoption3t = localStorage.getItem("option3t");
+document.getElementById("option3t").innerHTML=storedoption3t +"$";
+
+let storedoption4t = localStorage.getItem("option4t");
+document.getElementById("option4t").innerHTML=storedoption4t +"$";
+
+let storedoption5t = localStorage.getItem("option5t");
+document.getElementById("option5t").innerHTML=storedoption5t +"$";
+
+let storedsummarydur = localStorage.getItem("summarydur");
+   document.getElementById("summarydur").innerHTML =  storedsummarydur;
+
+
+
+   let storedoption1 = localStorage.getItem("option1");
+document.getElementById("option1").innerHTML=storedoption1;
+
+let storedoption2 = localStorage.getItem("option2");
+document.getElementById("option2").innerHTML=storedoption2;
+
+let storedoption3= localStorage.getItem("option3");
+document.getElementById("option3").innerHTML=storedoption3;
+
+let storedoption4 = localStorage.getItem("option4");
+document.getElementById("option4").innerHTML=storedoption4;
+
+let storedoption5 = localStorage.getItem("option5");
+document.getElementById("option5").innerHTML=storedoption5;
+
+
+function validateForm() {
+    var name = document.querySelector('input[placeholder="Required"]').value;
+    var card = document.querySelector('input[placeholder="Credit card number"]').value;
+    var month = document.getElementById('month').value;
+    var year = document.getElementById('year').value;
+    var cvv = document.querySelector('input[placeholder="4-digit CVV"]').value;
+    
+    if (name == "") {
+        document.getElementById("alertnames").innerHTML = "Please enter your name";
+        return false;
+    } else {
+        document.getElementById("alertnames").innerHTML = "";
+    }
+    
+    if (card == "" ) {
+        document.getElementById("alertcnumber").innerHTML = "Please enter your credit card number";
+        return false;
+    } else {
+        document.getElementById("alertcnumber").innerHTML = "";
+    }
+    if(card.length !== 16){
+      document.getElementById("alertcnumber").innerHTML = 'Please enter a valid 16-digit credit card number';  
+      return false;
+    }else {
+        document.getElementById("alertcnumber").innerHTML = "";
+    }
+  
+    if (month == "" || year == "") {
+        document.getElementById("alertexp").innerHTML = "Please enter the expiration date";
+        return false;
+    } else {
+        var expDate = new Date();
+        expDate.setFullYear(2000 + parseInt(year), parseInt(month) - 1, 1);
+        if (expDate < new Date()) {
+            document.getElementById("alertexp").innerHTML = "This Card is too Old";
+            return false;
+        } else {
+            document.getElementById("alertexp").innerHTML = "";
+        }
+    }
+    
+    if (cvv == "") {
+        document.getElementById("alertpassword").innerHTML = "Please enter the security code";
+        return false;
+    } else {
+        document.getElementById("alertpassword").innerHTML = "";
+    }
+    
+    return true;
+}
+
+document.querySelector('button[type="pay"]').addEventListener('click', function(event) {
+    event.preventDefault();
+    if (validateForm()) {
+        // submit the form
+        document.getElementById('paymentform').submit();
+    }
+});
+
+
+
+
+
+ // Function to retrieve data from localStorage
+ function getDataFromLocalStorage() {
+    // Get the data from localStorage using the key "userData"
+    const userDataJSON = localStorage.getItem("userData");
+
+    // Check if data exists in localStorage
+    if (userDataJSON) {
+      // If data exists, parse the JSON string back to an object
+      const userData = JSON.parse(userDataJSON);
+
+      // You can now access individual properties of the userData object
+      const fullname = userData.fullname;
+      const phone = userData.phone;
+      const email = userData.email;
+      const confirmEmail = userData.confirmEmail;
+      const gender = userData.gender;
+
+      // Use the data as needed, e.g., populate form fields or display it on the page
+      document.getElementById("fullname").innerHTML= fullname;
+      document.getElementById("phone").innerHTML= phone;
+      document.getElementById("femail").innerHTML= email;
+       document.getElementById("gender").innerHTML= gender;
+    } else {
+      // Handle the case when no data is found in localStorage
+      console.log("No data found in localStorage.");
+    }
+  }
+  
+
+  // Call the function to retrieve data when needed, e.g., on page load
+  getDataFromLocalStorage(); 
+
+   const monthInput = document.querySelector('#month');
+const yearInput = document.querySelector('#year');
+
+const focusSibling = function(target, direction, callback) {
+  const nextTarget = target[direction];
+  nextTarget && nextTarget.focus();
+  // if callback is supplied we return the sibling target which has focus
+  callback && callback(nextTarget);
+}
+
+// input event only fires if there is space in the input for entry. 
+// If an input of x length has x characters, keyboard press will not fire this input event.
+monthInput.addEventListener('input', (event) => {
+
+  const value = event.target.value.toString();
+  // adds 0 to month user input like 9 -> 09
+  if (value.length === 1 && value > 1) {
+      event.target.value = "0" + value;
+  }
+  // bounds
+  if (value === "00") {
+      event.target.value = "01";
+  } else if (value > 12) {
+      event.target.value = "12";
+  }
+  // if we have a filled input we jump to the year input
+  2 <= event.target.value.length && focusSibling(event.target, "nextElementSibling");
+  event.stopImmediatePropagation();
+});
+
+yearInput.addEventListener('keydown', (event) => {
+  // if the year is empty jump to the month input
+  if (event.key === "Backspace" && event.target.selectionStart === 0) {
+    focusSibling(event.target, "previousElementSibling");
+    event.stopImmediatePropagation();
+  }
+});
+
+const inputMatchesPattern = function(e) {
+  const { 
+    value, 
+    selectionStart, 
+    selectionEnd, 
+    pattern 
+  } = e.target;
+  
+  const character = String.fromCharCode(e.which);
+  const proposedEntry = value.slice(0, selectionStart) + character + value.slice(selectionEnd);
+  const match = proposedEntry.match(pattern);
+  
+  return e.metaKey || // cmd/ctrl
+    e.which <= 0 || // arrow keys
+    e.which == 8 || // delete key
+    match && match["0"] === match.input; // pattern regex isMatch - workaround for passing [0-9]* into RegExp
+};
+
+document.querySelectorAll('input[data-pattern-validate]').forEach(el => el.addEventListener('keypress', e => {
+  if (!inputMatchesPattern(e)) {
+    return e.preventDefault();
+  }
+}));
+
+
+
+
+// Get the input element
+var input = document.getElementById("mbsc-input");
+
+// Add an event listener for input change
+input.addEventListener("input", function() {
+  // Get the input value
+  var value = input.value;
+
+  // Check if the value is a number and lower than 16
+  if (isNaN(value) || value >= 16) {
+    // Remove the alert message if any
+    input.setCustomValidity("");
+  } else {
+    // Set the alert message with red color
+    alert("Please enter a number greater than or equal to 16");
+    input.style.color = "red";
+  }
+});
+
+
+
+
+
+ 
+
+
+
+   </script>
+
+</body>
+</html>
+
+
+
+

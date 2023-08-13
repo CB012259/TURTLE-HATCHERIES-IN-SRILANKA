@@ -1,0 +1,726 @@
+*{margin:0%;
+  padding:0%;
+  }
+  
+ 
+                                
+ 
+ 
+div {margin:0 auto; /* centred on page, no margin at top and bottom */
+	max-width:1300px;
+	max-height:max-content;
+}
+             	
+
+
+
+
+
+
+
+
+                                   /**********HOME PAGE****************/
+	.home {
+		 background-image:url(../images/turtle15.png);
+		 		   background-size:95%;
+ background-position:center;
+
+		   background-repeat:no-repeat;
+
+	}	
+                          /*Container*/
+ .home .container{
+	       
+           height:4000pxpx;
+		  
+		   background-color:rgb(47, 83, 109,0.5);
+		   
+		  
+		   
+		   }
+		      /**********************Article Home page**************************/
+	
+	
+	.home .article img{max-width:630px;
+		max-height:420px;
+		padding-left:100px;
+		
+		
+		}
+	.home li{
+		color: #fff;
+	}	
+	.home .article p{
+		background-color: rgb(44, 44, 74, 0.5);
+		margin: 10px;
+		border-radius: 25px;
+		padding: 10px;
+		font-weight: 600;
+	}
+	.home	.article {
+			max-height: max-content;
+			
+			min-width: 960px;
+			margin-top: 20px;
+			margin-right: auto;
+			margin-left: auto;
+			border:none;
+			
+			font-size: 20px;
+			
+			padding-bottom: 20px ;
+			font-family: papyrus;
+			width: 90%;
+			
+			font-weight: 400;
+		
+			  
+			 }
+	.home .article main strong{font-size:35;
+						 }
+	
+	 .home  .hero-image {
+			background-image:url("../images/2.jpg");
+		    height: 654px;
+		    background-position: center;
+			background-repeat: no-repeat;
+			background-size: cover;
+			position: relative;
+			text-align: center;
+			margin-bottom: 20px
+		  }                
+                                                
+		  .home  .hero-image text main{
+		
+			font-size: 20px;
+			
+			
+			font-family: Tempus Sans ITC;
+			width: 90%;
+			border-radius: 25px;
+			font-weight: 300;
+			position: absolute;
+            bottom: 0;
+			 width: 90%;
+             text-align: center;
+             
+			margin-left: 4%;
+			padding: 1%;
+			background-color: rgb(0, 0, 0,0.4);
+			
+			
+		
+
+  
+		
+			
+		  }
+		 
+		 
+		 .home .hero-image text p{
+			color: rgb(249, 250, 247);
+			font-weight:3000;
+			
+		 }
+		 
+		 
+		 
+		 
+		 
+		 
+		 
+		 
+		 
+		 
+		 
+		 
+		 
+		   /*header*/
+			header{
+				padding-top: 0px;
+				
+				
+			}
+                                                               /*nav*/
+			
+			
+			
+			
+			
+			
+			
+															   /* NAVBAR STYLING STARTS */
+        	.navbar {
+			display: flex;
+			align-items:center;
+			justify-content: space-evenly;
+			padding: 20px;
+			color: #fff;
+			width:1000px;
+			border-radius:35px;
+			position: fixed;
+			z-index: 4;
+			top:0%;
+			
+		} 
+			
+        
+
+			.nav-links{
+				max-width: 650px;}
+			
+				.nav-links a {
+			color: black;
+			text-align: center;
+			
+			
+			
+			
+			}
+			
+			/* LOGO */
+			.logo {
+			width:140px;
+			height:140px;
+			margin: 2px;
+			
+			}
+			
+			/* NAVBAR MENU */
+			.menu {
+			display: flex;
+			gap: 20px;
+			font-size: 12px;
+			
+		
+			
+			}
+			
+			.menu li:hover {
+			border-radius: 5px;
+			transition: 0.3s ease;
+			}
+			
+			.menu li {
+			padding: 5px 14px;
+			box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+			list-style: none;
+			border-radius:45px;
+			border-style:solid;
+			border-color:black;
+			font-family: Showcard Gothic;
+			background-color:rgb(255, 255, 255,0.3);
+		}
+		.menu li a{
+			text-decoration: none;
+			
+			}
+			/* DROPDOWN MENU */
+			.other {
+			position: relative;
+			
+			
+			
+			
+		 
+			
+			}
+			
+			.dropdown {
+			padding: 20px;
+			position:absolute;
+			display: none;
+			border-radius: 8px;
+			top: 14px;
+			
+			 
+			}
+			
+			.dropdown li + li {
+			margin-top: 10px;
+			}
+			
+			.dropdown li {
+			padding: 0.5em 1em;
+			width: 8em;
+			text-align: center;
+			
+			}
+			
+			
+			
+			.other:hover .dropdown {
+			display: block;}
+			
+			           
+                  
+				  
+				
+				  
+				  
+
+                                                    /* footer */
+		.footer {
+		background-color: rgba(145, 132, 132, 0.5);
+		padding-top: 10px;
+		text-align: center;
+		font-size: 17px;
+			  font-family:harrington;
+			height:200px;
+			backdrop-filter: blur*(5px);
+			margin:0% auto;
+			max-width:1300px ;
+			
+                }
+	  
+	  .footer ul {
+		list-style-type: none;
+		padding: 0;
+		margin: 10px 0;
+		text-align:center;
+			  font-family:Arial Narrow;
+			 }
+	  
+	  .footer li {
+		margin-bottom: 5px;
+		font-style: italic;
+		color: #000000;
+	  }
+                                       /****footer end************/
+
+	 
+		
+		
+		
+							 /***************************CATEGORIES*************************/
+.categories{
+	background-image: url(../images/cartoon-2027732_1280.png);
+	background-size: 90%;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+
+
+
+ .categories .container{ max-height: 6500px;
+background-color:none;
+background-image: none;
+padding-top: 150px;
+background-color: rgba(254, 145, 61, 0.4);
+
+
+}
+
+
+
+
+ .categories .article .greenturtle{ 
+	position: relative;
+	font-family: Arial;
+  
+  }
+
+.categories article .footer {
+	
+	max-height: max-content;
+	background-color:black ;
+	backdrop-filter: blur;
+	color: white;
+	padding-left: 20px;
+	padding-right: 20px;
+	font-size: 17px;
+	font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+	
+  }
+  
+
+	.categories article{
+		max-height: max-content;
+		border-color: black;
+		border-style: solid;
+		max-width: 960px;
+		margin-top: 10px;
+		margin-right: auto;
+		margin-left: auto;
+		margin-bottom: 30px;
+		
+	} 
+	.categories main article{
+		 border:none;
+		 max-width: 1250px;
+		 font-size: 20px;
+		 background-color: rgba(101, 120, 61, 0.3);
+		 padding: 16px;
+		 font-family: papyrus;
+		 width: 90%;
+		 border-radius: 25px;
+		 font-weight: 300;
+	}
+		 
+	                        .fade-in-text {
+								font-size: 20px;
+								animation: fadeIn 5s;
+							  }
+							  
+							  
+							@keyframes fadeIn {
+								0% { opacity: 0; }
+								100% { opacity: 1; }
+							  }
+							  
+							  
+
+
+.categories article .greenturtle img{
+	width: 960px;
+    height: 540px;}
+	.categories article .loggerheadturtle img{
+		width: 960px;
+		height: 640px;}
+
+		.categories article .hawksbillturtle img{
+			width: 960px;
+			height: 640px;}
+
+			.categories article .oliveridelyturtle img{
+				width: 960px;
+				height: 540px;}
+
+				.categories article .leatherbackturtle img{
+					width: 960px;
+					height: 638px;}
+
+
+ .categories .container table{
+		font-family: arial, sans-serif;
+		border-collapse: collapse;
+		width: 70%;
+		margin-left: auto;
+		margin-right: auto;
+		margin-bottom: 20px;
+		
+		
+	  }
+	  
+	  .categories .container table  td, th {
+		border: 1px solid #dddddd;
+		text-align: left;
+		padding: 8px;
+	  }
+	  
+	  .categories .container table tr:nth-child(odd) {
+		background-color: #dddddd;
+	  }
+
+	  .categories .container table tr:nth-child(even){
+		background-color: honeydew;
+
+	  }
+
+      .categories .container table img{max-height: max-content;
+	                                    width: 300px;
+									height: 503px;
+								      }
+									  .categories .container table tfoot td{background-color: rgb(132, 131, 131);
+									text-align: center;}
+
+
+									 /*************************************HIKKADUWA PAGE*****************************************************/
+									 
+									 
+									 
+			.HIKKADUWA{
+				background-image:url(images/hikkaduwa11.png) ;
+				background-repeat: no-repeat;
+				background-size: 98%;
+				background-position: center;
+
+			}
+									 
+
+		.HIKKADUWA .container {
+		min-width: 980px;
+		background-color:rgb(230, 243, 205,0.5);
+		padding-top: 150px;
+	
+		
+	   
+	   
+	   
+	   }
+.HIKKADUWA .scroll-container {
+overflow: auto;
+white-space: nowrap;
+margin: 50px;
+
+}
+
+.HIKKADUWA .scroll-container img {
+padding: 10px;
+min-width: 720px;
+height: 480px;
+}
+
+.HIKKADUWA  main article{
+
+	max-height: max-content;
+	border-color: black;
+	border-style: solid;
+	max-width: 960px;
+	margin-top: 10px;
+	margin-right: auto;
+	margin-left: auto;
+	margin-bottom: 30px;
+	border:none;
+	
+	font-size: 20px;
+	background-color: rgb(194, 178, 128,0.7);
+	padding: 16px;
+	font-family: papyrus;
+	width: 90%;
+	border-radius: 25px;
+	font-weight: 300;
+     text-align: left;
+     font-family: Tempus Sans ITC;
+}
+.HIKKADUWA .google-map {
+	padding-bottom:40px;
+	position: relative;
+	
+	max-width: 640px;
+	height: 400px;
+	margin-left: auto;
+	margin-right: auto;
+	
+	
+	
+	}
+	
+	.HIKKADUWA .google-map iframe {
+	height:100% ;
+	width:100%;
+	position: absolute;
+	
+	
+	}
+
+ .booknow{
+	background-color: #0c3901;
+	color: #ffffff;
+	border: none;
+	border-radius: 5px;
+	padding: 10px 20px;
+	cursor: pointer;
+	width: 100%;
+	font-size: 16px;
+	transition: background-color 0.3s;
+	width: 350px;
+	margin: 50px;
+	box-shadow: 0px 8px 16px 10px rgba(0,0,0,0.2);
+	border-color: #000000;
+
+ }      
+	
+.HIKKADUWA label{
+	font-size: 20px;
+	font-family: papyrus;
+	font-weight: bolder;
+
+}	
+	/*************************************THREATS PAGE************************************/
+    .threats .introduction{
+		background-color: rgba(255, 255, 255, 0.6);
+		border-radius: 25px;
+		padding: 10px;
+		text-align: center;
+		font-size: 30px;
+	}
+   .threats .container{
+	background-image: url(images/threats.png);
+	background-color:rgba(89, 1, 1, 0.5);
+	background-size: 90%;
+	background-repeat: no-repeat;
+	background-position: center;
+	
+	padding-top:90px ;
+	
+	
+
+}
+
+.threats section {
+	    max-height: max-content;
+		border-color: black;
+		border-style: solid;
+		min-width: 960px;
+		margin-top: 80px;
+		margin-right: auto;
+		margin-left: auto;
+		border:none;
+		font-size: 20px;
+		padding-bottom: 20px ;
+		font-family:Sitka Small;
+		width: 90%;
+		font-weight: 300;
+
+}
+
+.threats section img{
+	width: 800px ;
+	height: 420px;
+        }
+		.threats{
+			background-image: url(../images/threats1.png);
+		    background-repeat: no-repeat;
+			background-position: center;
+			background-size: 50%;
+		}
+
+		
+		     
+		
+		
+		
+		
+		/******************************DONATE PAGE********************************/
+
+              .donate{
+				background-image: url(../images/donate13.png);
+				background-position: center;
+				background-repeat: no-repeat;
+				background-size: 80%;
+			  }
+			 .donate .container {
+				
+				min-width: 1210px;
+				background-color: rgba(232, 233, 205, 0.3);
+			 }
+
+			  
+			  .donate  article{
+				max-height: max-content;
+			max-width: 960px;
+			margin-top: 20px;
+			margin-right: auto;
+			margin-left:auto ;
+			border:none;
+			font-size: 22px;
+			padding-bottom: 20px ;
+			font-family:Sitka Display;
+			width: 90%;
+			font-weight: 300;
+			background-color: rgb(205, 121, 121,0.4);
+			border-radius: 25px;
+			padding: 30px;
+			margin-bottom:70px ;
+			
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size:95% ;
+			
+			
+
+
+			  }
+
+			.donate .hero-image {
+				background-image: url(../images/donate1.jpg);
+				height: 653px;
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		position: relative;
+		
+			                        }
+ .donate main{
+	max-height: max-content;
+			min-width: 960px;
+			
+			margin-right: auto;
+			margin-left: auto;
+			
+			border:none;
+			
+			width: 90%;
+			
+			padding: 0px;
+			
+
+ }
+
+ .donate main section {
+	background-image: url(../images/donate12.png);
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: 20%;
+			padding: 20px ;
+			font-weight: 800;
+			background-color:rgb(178, 178, 178,0.5);
+			border-radius: 25px;
+			font-size: 30px;
+			font-family:Garamond;
+			margin-top: 10px;
+ }
+ .donate h2 img{
+	width:300px;
+	 height:200px;
+	 float: right;
+	 border: 1px dotted black;
+	 margin: 0px 0px 15px 20px;
+	 
+ }
+
+ .donate .purchase{
+	
+	text-align: center;
+	display: flex;
+	margin-bottom: 20px;
+	
+	left: 0;
+
+ }
+
+ .donate .purchase .section{
+	        height: 300px;
+			width: 300px;
+			margin-top: 20px;
+			margin-right: auto;
+			margin-left: auto;
+		
+			border:none;
+			font-size: 10px;
+			
+			padding-bottom: 20px ;
+			font-family:Arial, Helvetica, sans-serif;
+			font-weight: 300;
+			background-color:lavenderblush ;
+			border-radius: 25px;
+			padding: 0.5%;
+			text-align: center;
+			
+ }
+ .purchase img{
+	width: 250px;
+	height:250px;
+	padding-bottom: 10px;
+	 }
+	 .purchase .row .section{
+		max-width: 300px;
+		background-color: #f2f2f2;
+      border: 1px solid #ccc;
+      margin-bottom: 10px;
+      height: 320px;
+      text-align: center;
+     
+      box-sizing: border-box;
+     
+	 }
+	
+   
+	
+	.donate h1 {
+		margin-left: 30px;
+	
+	}
+	

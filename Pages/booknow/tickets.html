@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en" id="page1">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+           
+   
+   <link rel="stylesheet" href="styles.css">
+   <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+   <link rel="stylesheet" href="https://resources/demos/style.css">
+   
+   <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <title>Ticket Page</title>
+</head>
+
+<body  class="ticket">
+  
+
+  <div class="container" >
+    <nav>
+    <ul>
+     <li><a href="../Pages/hikkaduwa.html">HIKKADUWA PAGE</a></li>
+      <li><a href="tickets.html">Tickets</a></li>
+      <li><a href="detail.html">Details</a></li>
+      <li><a href="payment.html">Payment</a></li>
+      <li><a href="confirm.html">Confirm</a></li>
+    
+    </ul>
+  </nav>
+  <form class="ticketForm" id="ticketForm" action="detail.html"> <h1>Booking Form</h1>
+    <br><br>
+      <div id="ticketForm" class="ticketForm" >
+<div id="select-date" > <label for="booking-date" class="sel">Select a Date:</label>
+  <div id="booking-date" class="date"></div>
+  <label id="alertdate" class="alert"></label>
+ </div>
+<br>
+          <label for="slAdult" class="sel">SL Adult:</label>
+          <input type=button value="+" onclick="button1()" /> <label id="value1" class="value"></label> <input type=button value="-" onclick="button2()" />
+          <br><br>
+           <label for="slChild" class="sel">SL Child:</label>
+          <input type=button value="+" onclick="button3()" /> <label id="value2" class="value"></label> <input type=button value="-" onclick="button4()" />
+       <br>
+      <br>
+        <label for="foreignerAdult" class="sel">Foreigner Adult:</label>
+        <input type=button value="+" onclick="button5()" />  <label id="value3" class="value"></label>  <input type=button value="-" onclick="button6()" />
+      <br>
+    <br>
+        <label for="foreignerChild" class="sel">Foreigner Child:</label>
+          <input type=button value="+" onclick="button7()" />  <label id="value4" class="value"></label>  <input type=button value="-" onclick="button8()" />
+      <br> <br>
+          <label for="infant" class="sel">Infant:</label>
+          <input type=button value="+" onclick="button9()" /> <label id="value5" class="value"></label>  <input type=button value="-" onclick="button10()" />
+      <br>
+      <label id="alertqua" class="alert"></label>
+     </div>
+      <br><br>
+      <center> <table id="priceTable" class="priceTable">
+      <tr>
+        <th>Visitor Type</th>
+        <th>Foreigner Adult</th>
+        <th>Foreigner Child</th>
+        <th>SL Adult</th>
+        <th>SL Child</th>
+         <th>Infant</th>
+      </tr>
+      <tr>
+        <td>Normal Hour Price</td>
+        <td>$10</td>
+        <td>$5</td>
+        <td>$4</td>
+        <td>$2</td>
+        <td>fr€€</td>
+      </tr>
+      <tr>
+        <td>Peak Hour Price (10am to 1pm & 3pm to 6pm)</td>
+        <td>$13</td>
+        <td>$8</td>
+        <td>$6</td>
+        <td>$3</td>
+         <td>fr€€</td>
+      </tr>
+    </table></center> 
+   
+    <br><br>
+    <div id="flex">
+       <div id="duration" >
+       <label for="duration">Select Duration:</label><br><br>
+
+    <label class="du">7am - 8am:     </label> <input type="checkbox" id="1" class="checkbox" onchange="handle()" /><br>
+    <label class="du">8am - 9am:     </label> <input type="checkbox" id="2" class="checkbox" onchange="handle()" /><br>
+    <label class="du">9am - 10am:     </label> <input type="checkbox" id="3" class="checkbox" onchange="handle()" /><br>
+    <label class="du">10am - 11am:   </label> <input type="checkbox" id="4"class="checkbox"  onchange="handles()" /><br>
+    <label class="du">11am - 12pm:   </label> <input type="checkbox" id="5" class="checkbox" onchange="handles()" /><br>
+    <label class="du">12pm - 1pm:    </label> <input type="checkbox" id="6" class="checkbox" onchange="handles()" /><br>
+    <label class="du">1pm - 2pm:   </label> <input type="checkbox" id="7" class="checkbox"  onchange="handle()" /><br>
+    <label class="du">2pm - 3pm:   </label> <input type="checkbox" id="8"class="checkbox"  onchange="handle()" /><br>
+    <label class="du">3pm - 4pm:   </label> <input type="checkbox" id="9" class="checkbox" onchange="handles()" /><br>
+    <label class="du">4pm - 5pm:   </label> <input type="checkbox" id="10" class="checkbox" onchange="handles()" /><br>
+    <label class="du">5pm - 6pm:   </label> <input type="checkbox" id="11" class="checkbox" onchange="handles()" /><br>
+    <br><br>
+   <label id="alertche" class="alert"></label> <br>
+   <input type="button" value="Update" id="Submit" onclick="call()"><input type="reset" id="reset" value="Reset" onclick="Reset()">
+   <label for="alert" id="alertupdate" class="alert"></label>
+     </div>
+    <div id="summarytable">
+      <table>
+      <tr> <td >Selected date</td> <td id="date"></td></tr>
+      <tr>
+      <tr>
+        <td id="option1"></td>
+        <td id="option1t"></td>
+      </tr>
+      <tr>
+        <td id="option2"></td>
+        <td id="option2t"></td>
+      </tr>
+      <tr>
+        <td id="option3"></td>
+        <td id="option3t"></td>
+      </tr>
+      <tr>
+        <td id="option4"></td>
+        <td id="option4t"></td>
+      </tr>
+      <tr>
+        <td id="option5"></td>
+        <td id="option5t"></td>
+      </tr>
+      <tr>
+        <td> Selected Time Duration:</td>
+        <td id="summary"></td>
+      </tr>
+      <tr>
+        <td> Selected Durations types:</td>
+        <td id="summarydur"></td>
+      </tr>
+
+      <tr>
+        <td > Total:</td>
+        <td id="total"></td>
+      </tr>
+ </table> 
+</div>
+ </div><br>
+  <center> <input type="button" id="submit" class="cp" name="continue" value="  Continue Purchase  " onclick="ticketsub()">
+</center> </form>
+  </div>
+  <script src="script.js"> </script> 
+    </body>
+</html>
